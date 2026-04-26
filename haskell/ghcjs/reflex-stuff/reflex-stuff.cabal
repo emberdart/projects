@@ -49,6 +49,6 @@ executable letters
   main-is:       letters.hs
   build-depends:
     , base        ^>=4.22
-    , clay        ^>=0.15
+    , clay        ^>=0.16.1
     , reflex-dom  ^>=0.6.3.3
     , text        ^>=2.1.2

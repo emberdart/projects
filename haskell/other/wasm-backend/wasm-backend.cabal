@@ -62,7 +62,7 @@ executable for-node
 
   hs-source-dirs:     src
   default-language:   GHC2024
-  default-extensions:
+  default-extensions: UnicodeSyntax
   ghcjs-options:      -dedupe
 
 executable for-browser

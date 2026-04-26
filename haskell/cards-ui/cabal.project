@@ -1,3 +1,4 @@
 packages:
     ./cards-ui.cabal
 tests: True
+allow-newer: base,template-haskell
