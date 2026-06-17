@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS =
-EXECUTABLES = build/functional build/imperative
+EXECUTABLES = build/resource build/imperative
 
 .PHONY: all
 

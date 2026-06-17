@@ -7,7 +7,7 @@ LL* newlist() {
     return (LL*) malloc(sizeof(LL)); /* why: https://stackoverflow.com/questions/26206667/do-we-have-to-malloc-a-struct */
 }
 
-void* printlist(LL* list, int from) {
+void printlist(LL* list, int from) {
     printf("%d: %s\n", from, list->value);
 
     if (NULL != list->next) {
@@ -27,7 +27,6 @@ LL* from_array(char *array[], int size) {
 }
 
 void insert(char *value, LL* list) {
-    char **tracer;
-
+    /* char **tracer; */
     
 }

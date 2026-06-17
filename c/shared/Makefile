@@ -1,23 +1,28 @@
 CC = gcc
-CFLAGS =
-CFLAGS_build/dlopen = -rdynamic -ldl
-CFLAGS_build/shared.so = -fPIC
+CFLAGS = -Wall
+CFLAGS_build/exe/dlopen = -rdynamic -ldl
 LDFLAGS =
-EXECUTABLES = build/dlopen build/game
-SHARED_LIBRARIES = build/preload.so build/shared.so build/darkside.so build/derand.so build/evilstrs.so build/memfuck.so build/wrap.so build/memlog.so
+EXECUTABLES = build/exe/dlopen build/exe/game
+SHARED_LIBRARIES = build/lib/preload.so build/lib/shared.so build/lib/darkside.so build/lib/derand.so build/lib/evilstrs.so build/lib/memfuck.so build/lib/wrap.so build/lib/memlog.so
 
 .PHONY: all
 
-all: build $(EXECUTABLES) $(SHARED_LIBRARIES)
+all: build/exe build/lib $(EXECUTABLES) $(SHARED_LIBRARIES)
 
-build:
-	mkdir build
+build/exe:
+	mkdir -p build/exe
 
-build/%: src/%.c
-	$(CC) $(CFLAGS) $(CFLAGS_$@) $< -o $@
+build/lib:
+	mkdir -p build/lib
 
-build/%.so: src/%.c
-	$(CC) $(CFLAGS) $(CFLAGS_$@) -shared $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) $(CFLAGS_$@) $< -c -o $@
+
+build/exe/%: src/%.o
+	$(CC) $(CFLAGS) $(CFLAGS_$@) -emain -lc $< -o $@
+
+build/lib/%.so: lib/%.o
+	$(CC) $(CFLAGS) $(CFLAGS_$@) -shared -fPIC $< -o $@
 
 clean:
-	$(RM) -r build
+	$(RM) -r src/*.o lib/*.o build

@@ -20,7 +20,7 @@ void demo1(int argc) {
 
     int code = setjmp(my_buffer);
 
-    printf("Code is %d\n");
+    printf("Code is %d\n", code);
 
     switch (code) {
         case 0:

@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#ifndef LIB_LL_H
+#define LIB_LL_H
 
 typedef struct ll {
     char *value;
@@ -9,8 +8,10 @@ typedef struct ll {
 
 LL* newlist();
 
-void* printlist(LL* list, int from);
+void printlist(LL* list, int from);
 
 LL* from_array(char *array[], int size);
 
 void insert(char *value, LL* list);
+
+#endif

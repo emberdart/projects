@@ -1,7 +1,7 @@
 /**
  * Shift register LED demo
  * 
- * @author Dan Dart
+ * @author Ember Dart
  */
 
 #include <stdio.h>

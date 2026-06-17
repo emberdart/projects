@@ -1,7 +1,7 @@
 /**
  * Serial programmer
  * 
- * @author Dan Dart
+ * @author Ember Dart
  */
 
 #include <stdio.h>

@@ -5,7 +5,7 @@
 static time_t darkside = 99792000;
 
 void debug_evil_time(char *func, time_t when) {
-    printf("Called %s, but returned %d. Mwahahaha!\n", func, when);
+    printf("Called %s, but returned %ld. Mwahahaha!\n", func, when);
 }
 
 time_t time( time_t *second ) {

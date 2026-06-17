@@ -3,5 +3,8 @@ runCommand "static" {
     buildInputs = [
         pkgsMusl.gcc # or gcc
         musl
+        gdb
+        binutils
+        gnumake
     ];
 } ""

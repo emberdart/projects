@@ -11,7 +11,7 @@ void debug_memfuck(char *func, size_t size) {
     write(0, func, strlen(func));
     write(0, " which asked for ", 18);
     memset(size_s, 0, 16);
-    sprintf(size_s, "%d", size);
+    sprintf(size_s, "%lu", size);
     write(0, size_s, 12);
     write(0, " but fucked it up on purpose. Say goodbye to your heap! Mwahahaha!\n", 68);
 }

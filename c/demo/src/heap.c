@@ -6,9 +6,9 @@ int main(int argc, char **argv)
 {
     printf("Allocating...");
 
-    char *allocated = heap_alloc(10);
+    char *allocated = heap_alloc(100);
 
-    strcpy(allocated, "Hello World!"); // Oh no, overflow! What do?
+    strcpy(allocated, "Hello World!");
 
     printf("%s", allocated);
 

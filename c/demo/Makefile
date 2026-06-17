@@ -1,26 +1,35 @@
 CC = gcc
-CFLAGS = -lm -L./lib
+CFLAGS = -Wall -g -lm -L./lib
 LD = ld
-LDFLAGS = # -lc -emain # ????
-LIBS = lib/heap.o lib/linkedlist.o
-PLAIN_EXECUTABLES = build/one build/two build/three build/four build/five build/six build/hacker build/spinner build/fake-exception
-LIB_EXECUTABLES = build/heap build/ll
+LDFLAGS = -g -lc -lm
+LIBS = build/lib/libheap.so build/lib/libll.so
+PLAIN_EXECUTABLES = build/exe/one build/exe/two build/exe/three build/exe/four build/exe/five build/exe/six build/exe/hacker build/exe/spinner build/exe/fake-exception build/exe/xorptr build/exe/duplicate build/exe/fd
+LIB_EXECUTABLES = build/exe/heap build/exe/ll
 
 .PHONY: all
 
-all: build $(PLAIN_EXECUTABLES) $(LIB_EXECUTABLES)
+all: build/exe build/lib $(PLAIN_EXECUTABLES) $(LIB_EXECUTABLES) $(LIBS)
 
-build:
-	mkdir build
+build/lib:
+	mkdir -p build/lib
 
-build/%: src/%.c
+build/exe:
+	mkdir -p build/exe
+
+%.o: %.c
+	$(CC) $(CFLAGS) $< -c -o $@
+
+build/lib/%.so: lib/%.o
+	$(CC) $(CFLAGS) -shared -fPIC $< -o $@
+
+build/exe/ll: lib/libll.o src/ll.o
+	$(CC) $(CFLAGS) lib/libll.o src/ll.o -o $@
+
+build/exe/heap: lib/libheap.o src/heap.o
+	$(CC) $(CFLAGS) lib/libheap.o src/heap.o -o $@
+
+build/exe/%: src/%.o
 	$(CC) $(CFLAGS) $< -o $@
-
-build/ll: lib/libll.c src/ll.c
-	$(CC) $(CFLAGS) lib/libll.c src/ll.c -o $@
-
-build/heap: lib/libheap.c src/heap.c
-	$(CC) $(CFLAGS) lib/libheap.c src/heap.c -o $@
 
 clean:
 	$(RM) -r build src/*.o lib/*.o

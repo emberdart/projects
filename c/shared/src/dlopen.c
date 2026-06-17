@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    (*io)("Boiii");
+    (*io)();
 
     /* NOT: fn = (char *(*)(char *)) dlsym(handle, "fn"); */
 
