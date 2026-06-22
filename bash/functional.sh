@@ -38,8 +38,8 @@ fileIO ted2.txt Hello
 # Here's a demonstration of using it to set up a bidirectional pipe.
 
 # Create /dev/fd/3 - this way we can hold connections and pipes open!
-exec 3<>/dev/tcp/dandart.co.uk/80
-REQ_DAN="GET / HTTP/1.1\nHost: dandart.co.uk\nConnection: close\n\n"
+exec 3<>/dev/tcp/emberdart.co.uk/80
+REQ_DAN="GET / HTTP/1.1\nHost: emberdart.co.uk\nConnection: close\n\n"
 
 # -e will evaluate escape sequences
 # Send to pipe
@@ -53,14 +53,14 @@ exec 3>&-
 # or exec 3<&-
 
 # With NC, we get the response immediately
-echo -e "$REQ_DAN" | nc dandart.co.uk 80
+echo -e "$REQ_DAN" | nc emberdart.co.uk 80
 
 # Looks like we need SSL!
-echo -e "$REQ_DAN" | openssl s_client -quiet -connect dandart.co.uk:443
+echo -e "$REQ_DAN" | openssl s_client -quiet -connect emberdart.co.uk:443
 
 # We can also make auto pipes of these
 mkfifo bob
-echo -e "$REQ_DAN" | openssl s_client -quiet -connect dandart.co.uk:443 > bob &
+echo -e "$REQ_DAN" | openssl s_client -quiet -connect emberdart.co.uk:443 > bob &
 cat bob
 # cleanup
 rm bob
