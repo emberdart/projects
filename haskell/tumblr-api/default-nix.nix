@@ -1,6 +1,6 @@
 {
   nixpkgs ? import <nixpkgs> {},
-  haskell-tools ? import (builtins.fetchTarball "https://github.com/danwdart/haskell-tools/archive/master.tar.gz") {
+  haskell-tools ? import (builtins.fetchTarball "https://github.com/emberdart/haskell-tools/archive/master.tar.gz") {
     inherit nixpkgs;
     inherit compiler;
   },
@@ -13,7 +13,7 @@ let
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       humblr = self.callCabal2nix "humblr" (builtins.fetchGit {
-        url = "https://github.com/danwdart/humblr.git";
+        url = "https://github.com/emberdart/humblr.git";
         rev = "a0e466b8bb51407ec1131d172e4f6eab994970ef";
       }) {};
       # https://github.com/AndrewRademacher/aeson-casing/issues/7

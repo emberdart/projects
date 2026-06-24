@@ -12,8 +12,8 @@ version:            0.2.0.0
 license:            AGPL-3.0-only
 
 -- license-file:        LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
 
 -- copyright:
 -- category:
@@ -39,7 +39,7 @@ executable misostuff
   ghcjs-options:      -dedupe
   cpp-options:        -DGHCJS_BROWSER
   build-depends:
-    , aeson       ^>=2.2.3
+    , aeson       ^>=2.3.0
     , base        ^>=4.22
     , containers  ^>=0.8
     , miso        ^>=1.7.1

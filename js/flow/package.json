@@ -9,7 +9,7 @@
     "start": "node js/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dan Dart <npm@dandart.co.uk>",
+  "author": "Ember Dart <npm@emberdart.co.uk>",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-flow": "8.0.0-alpha.5",

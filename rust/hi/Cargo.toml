@@ -1,6 +1,6 @@
 [package]
 name = "hi"
 version = "0.1.0"
-authors = ["Dan Dart <git@dandart.co.uk>"]
+authors = ["Ember Dart <git@emberdart.co.uk>"]
 
 [dependencies]

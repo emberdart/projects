@@ -2,8 +2,8 @@
 
 module Main (main) where
 
-import Control.Concurrent
-import Control.Concurrent.Async
+-- import Control.Concurrent
+-- import Control.Concurrent.Async
 import Data.Graph.DGraph
 import Data.Graph.Inductive.Graph
 import Data.Graph.Inductive.PatriciaTree
@@ -67,7 +67,7 @@ fglGraph = mkGraph walkingFglNodes walkingFglEdges
 -- END fgl
 
 walkingGraphTimeInMinutes ∷ UGraph String Double
-walkingGraphTimeInMinutes = (/10) . fromIntegral . round . (/18) . fromIntegral <$> walkingGraph
+walkingGraphTimeInMinutes = (/ 10) . fromIntegral . round . (/ 18) . fromIntegral <$> walkingGraph
 
 birdsEyeGraph ∷ UGraph String Int
 birdsEyeGraph = fromEdgesList [
@@ -107,13 +107,13 @@ main = pure ()
 -- | Same as 'plotUGraph' but render edge attributes
 plotUGraphEdged ∷ (Hashable v, Ord v, PrintDot v, Show v, Show e)
  ⇒ UGraph v e
- → IO ThreadId
+ → IO ()
 plotUGraphEdged g = runGraphvizCanvas Sfdp (toUndirectedDot True g) Xlib
 
 labeledNodes ∷ (Data.Graph.Types.Graph g, Show v) ⇒ g v e → [(v, String)]
 labeledNodes g = (\v -> (v, show v)) <$> vertices g
 
-labeledEdges ∷ (Hashable v, Eq v, Show e) ⇒ UGraph v e → [(v, v, String)]
+labeledEdges ∷ (Hashable v, Show e) ⇒ UGraph v e → [(v, v, String)]
 labeledEdges g = (\(Edge v1 v2 attr) -> (v1, v2, show attr)) <$> Data.Graph.UGraph.edges g
 
 toUndirectedDot ∷ (Hashable v, Ord v, Show v, Show e)

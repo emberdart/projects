@@ -5,8 +5,8 @@ version:            0.1.0.0
 -- description:
 license:            AGPL-3.0-or-later
 license-file:       LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
 -- copyright:
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md

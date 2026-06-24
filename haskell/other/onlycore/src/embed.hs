@@ -4,7 +4,9 @@
 
 module Main (main) where
 
-import Language.Haskell.TH
+import Language.Haskell.TH (runIO)
+import Language.Haskell.TH.Lib (stringE)
+-- import Language.Haskell.TH.QuasiQuoter
 
 main ∷ IO ()
 main = putStrLn bob

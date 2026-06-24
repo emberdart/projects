@@ -6,8 +6,8 @@ module Main (main) where
 import Control.Monad.Random
 -- import Data.List (List)
 import Data.List qualified as L
-import Data.Map
-import Data.Map (Map) qualified as M
+import Data.Map qualified as M
+import Data.Map (Map) 
 
 main :: IO ()
 main = do

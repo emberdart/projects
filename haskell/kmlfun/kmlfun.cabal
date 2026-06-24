@@ -3,11 +3,11 @@ name:               kmlfun
 version:            0.2.0.0
 synopsis:           kml fun
 description:        Fun with kml
-bug-reports:        https://github.com/danwdart/projects/issues
+bug-reports:        https://github.com/emberdart/projects/issues
 license:            CC0-1.0
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2021 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2021 Ember Dart
 category:           Mapping
 extra-doc-files:    CHANGELOG.md
 

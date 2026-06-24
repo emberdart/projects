@@ -4,11 +4,11 @@ version:            0.2.0.0
 
 -- synopsis:
 -- description:
-homepage:           https://github.com/danwdart/projects#readme
+homepage:           https://github.com/emberdart/projects#readme
 license:            AGPL-3.0-only
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2019 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2019 Ember Dart
 category:           Web
 build-type:         Simple
 extra-source-files: README.md
@@ -78,7 +78,7 @@ executable env-test
   build-depends:
     , base              ^>=4.22
     , ghcjs-stuff       ^>=0.2
-    , template-haskell  >=2.23 && <2.25
+    -- , template-haskell  >=2.23 && <2.25
 
 -- for ghc 9.10.1
 -- , jsaddle-warp ^>=0.9.9.2

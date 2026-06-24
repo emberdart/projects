@@ -8,7 +8,7 @@
     "test": "eslint unfart.js && web-ext lint"
   },
   "keywords": [],
-  "author": "Dan Dart <npm@dandart.co.uk> (https://dandart.co.uk/)",
+  "author": "Ember Dart <npm@emberdart.co.uk> (https://emberdart.co.uk/)",
   "license": "AGPL-3.0",
   "devDependencies": {
     "eslint": "^9.15.0",

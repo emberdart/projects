@@ -5,7 +5,7 @@
 module Main (main) where
 
 import Data.Proxy
-import Language.Haskell.TH
+import Language.Haskell.TH (runQ)
 import RuntimeTypes
 import System.Environment
 

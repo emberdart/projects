@@ -10,7 +10,7 @@
     "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
-  "author": "Dan Dart <git@dandart.co.uk>",
+  "author": "Ember Dart <git@emberdart.co.uk>",
   "license": "WTFPL",
   "devDependencies": {
     "@babel/cli": "^8.0.0-alpha.5",

@@ -5,8 +5,8 @@ synopsis:        Some FFI demos
 description:     Some FFI demos
 license:         AGPL-3.0-or-later
 license-file:    LICENSE
-author:          Dan Dart
-maintainer:      cabal@dandart.co.uk
+author:          Ember Dart
+maintainer:      cabal@emberdart.co.uk
 
 -- copyright:
 category:        Development

@@ -5,8 +5,8 @@ synopsis:           Quickchecking a couple of C libraries
 description:        Quickchecking a couple of C libraries
 license:            AGPL-3.0-or-later
 license-file:       LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
 
 -- copyright:
 category:           Development

@@ -6,13 +6,13 @@ version:            0.2.0.0
 
 -- synopsis:
 -- description:
-homepage:           https://github.com/danwdart/projects#readme
+homepage:           https://github.com/emberdart/projects#readme
 license:            AGPL-3.0-only
 
 -- license-file:        LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2019 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2019 Ember Dart
 category:           Web
 build-type:         Simple
 extra-source-files: README.md
@@ -79,6 +79,8 @@ library
     , mtl               ^>=2.3.1
     , parsec            ^>=3.1.18
     , template-haskell  >=2.23 && <2.25
+    , template-haskell-lift  ^>=0.1
+    , template-haskell-quasiquoter  ^>=0.1
     , text              ^>=2.1.2
 
   if (arch(javascript) || arch(wasm32))
@@ -174,6 +176,7 @@ executable embed
   main-is:       embed.hs
   build-depends:
     , base              ^>=4.22
+    -- , template-haskell-quasiquoter  ^>=0.1
     , template-haskell  >=2.23 && <2.25
 
 executable endo
@@ -277,6 +280,7 @@ executable runtime-types
     , base              ^>=4.22
     , onlycore          ^>=0.2
     , template-haskell  >=2.23 && <2.25
+    -- , template-haskell-quasiquoter  ^>=0.1
 
   main-is:       runtime-types.hs
 

@@ -20,8 +20,8 @@ handler request = do
   print $ request ^. requestBody
   {-
   let sre = sendRawEmail (rawMessage "Hello World") &
-    sreDestinations .~ ["amazon@dandart.co.uk"] &
-      sreSource ?~ "amazon@dandart.co.uk"
+    sreDestinations .~ ["amazon@emberdart.co.uk"] &
+      sreSource ?~ "amazon@emberdart.co.uk"
   -}
   pure $ responseOK &
     responseBody

@@ -9,7 +9,7 @@ module Main (main) where
 -- import Data.Map
 import BookStatic
 import Data.Yaml.TH
-import Language.Haskell.TH
+import Language.Haskell.TH (Code(..))
 
 -- Method 1: TH (you use this)
 

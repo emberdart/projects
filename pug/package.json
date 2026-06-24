@@ -13,7 +13,7 @@
   "keywords": [
     "pug"
   ],
-  "author": "Dan Dart <npm@dandart.co.uk>",
+  "author": "Ember Dart <npm@emberdart.co.uk>",
   "license": "WTFPL",
   "dependencies": {
     "@snyk/protect": "^1.1294.0",

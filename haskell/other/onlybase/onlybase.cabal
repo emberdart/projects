@@ -6,13 +6,13 @@ version:            0.2.0.0
 
 -- synopsis:
 -- description:
-homepage:           https://github.com/danwdart/projects#readme
+homepage:           https://github.com/emberdart/projects#readme
 license:            AGPL-3.0-only
 
 -- license-file:        LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2019 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2019 Ember Dart
 category:           Web
 build-type:         Simple
 extra-source-files: README.md
@@ -495,6 +495,10 @@ executable read
     , onlybase  ^>=0.2
 
   main-is:       read.hs
+
+executable readgadt
+  import:  shared-properties-unsafe
+  main-is: readgadt.hs
 
 executable rebindable
   import:  shared-properties-safe

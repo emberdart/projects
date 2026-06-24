@@ -9,7 +9,7 @@
     "test": "eslint js/src",
     "watch": "webpack -w"
   },
-  "author": "Dan Dart <npm@dandart.co.uk>",
+  "author": "Ember Dart <npm@emberdart.co.uk>",
   "license": "AGPL-3.0",
   "devDependencies": {
     "@babel/core": "^8.0.0-alpha.5",

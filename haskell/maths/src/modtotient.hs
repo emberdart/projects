@@ -2,9 +2,9 @@
 {-# LANGUAGE GHC2024               #-}
 {-# LANGUAGE RequiredTypeArguments #-}
 {-# LANGUAGE UnicodeSyntax         #-}
-{-# OPTIONS_GHC -Wno-deprecations #-}
+{-# OPTIONS_GHC -Wno-deprecations -Wno-unused-top-binds #-}
 
-module Main where
+module Main (main) where
 
 import Data.Bits
 import Data.Kind
@@ -154,12 +154,7 @@ coprimeTable n f = fmap (\x -> fmap (f x) nums) nums where
 --
 
 -- >>> displayTable $ fullTable 2 0 (.&.)
--- <interactive>:630:31-35: error: [GHC-39999]
---     • No instance for ‘Bits (Mod 2)’ arising from a use of ‘.&.’
---     • In the third argument of ‘fullTable’, namely ‘(.&.)’
---       In the second argument of ‘($)’, namely ‘fullTable 2 0 (.&.)’
---       In the expression: displayTable $ fullTable 2 0 (.&.)
--- <BLANKLINE>
+-- "0 0\n0 1\n"
 --
 displayTable :: [[Mod n]] -> String
 displayTable = unlines . fmap (unwords . fmap (show . getMod))

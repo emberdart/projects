@@ -4,8 +4,8 @@ version:            0.2.0.0
 synopsis:           Nothing
 license:            AGPL-3.0-only
 license-file:       LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
 category:           Nothing
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md

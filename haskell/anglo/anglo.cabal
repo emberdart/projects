@@ -3,11 +3,11 @@ cabal-version:      3.14
 -- Newer versions complain
 name:               anglo
 version:            0.2.0.0
-homepage:           https://github.com/danwdart/projects#readme
+homepage:           https://github.com/emberdart/projects#readme
 license:            AGPL-3.0-only
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2019 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2019 Ember Dart
 category:           Web
 build-type:         Simple
 extra-source-files: README.md
@@ -21,7 +21,7 @@ library
   default-language:   GHC2024
   default-extensions: UnicodeSyntax
   build-depends:
-    , aeson        ^>=2.2.3
+    , aeson        ^>=2.3.0
     , bytestring   ^>=0.12.2
     , containers   ^>=0.8
     , MonadRandom  ^>=0.6.1
@@ -66,7 +66,7 @@ executable anglo
   import:        shared-properties
   main-is:       Main.hs
   build-depends:
-    , aeson       ^>=2.2.3
+    , aeson       ^>=2.3.0
     , base        ^>=4.22
     , bytestring  ^>=0.12.2
     , text        ^>=2.1.2

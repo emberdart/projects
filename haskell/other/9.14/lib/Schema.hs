@@ -16,8 +16,10 @@ import Data.Text                  (Text)
 import Data.Yaml                  hiding (decodeFile)
 -- import Data.Yaml.Parser
 import GHC.Generics
-import Language.Haskell.TH
-import Language.Haskell.TH.Syntax
+import Language.Haskell.TH.Lift
+import Language.Haskell.TH.QuasiQuoter
+import Language.Haskell.TH (Name, TExp)
+-- import Language.Haskell.TH.Syntax
 
 newtype ColumnType = ColumnType Name
     deriving stock (Eq, Show, Generic, Lift)
@@ -43,7 +45,7 @@ newtype Schema = Schema [(Text, Field)]
     deriving stock (Eq, Show, Generic, Lift)
     deriving (FromJSON, ToJSON) via Generically Schema
 
-expToDecsQ ∷ TExp Schema → DecsQ
+expToDecsQ ∷ TExp Schema → Q [Dec]
 expToDecsQ _ = [d|
     data Book = Book {
         title :: Text,

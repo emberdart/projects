@@ -1,7 +1,5 @@
-#include <stdlib.h>
-
-#ifndef _QUEUE_H
-#define _QUEUE_H
+#ifndef QUEUE_H
+#define QUEUE_H
 
 typedef struct queue {
     int inp;

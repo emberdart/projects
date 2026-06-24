@@ -13,7 +13,7 @@
     "start": "serve"
   },
   "keywords": [],
-  "author": "Dan Dart <npm@dandart.co.uk> (https://dandart.co.uk/)",
+  "author": "Ember Dart <npm@emberdart.co.uk> (https://emberdart.co.uk/)",
   "license": "AGPL-3.0",
   "dependencies": {
     "@snyk/protect": "^1.1294.0",

@@ -6,8 +6,8 @@ version:         0.2.0.0
 -- description:
 license:         AGPL-3.0-only
 license-file:    LICENSE
-author:          Dan Dart
-maintainer:      cabal@dandart.co.uk
+author:          Ember Dart
+maintainer:      cabal@emberdart.co.uk
 
 -- copyright:
 build-type:      Simple
@@ -57,7 +57,7 @@ executable for-node
   -- other-extensions:
   build-depends:      base ^>=4.22
 
-  -- , aeson       ^>=2.2.3
+  -- , aeson       ^>=2.3.0
   -- , wasm-backend  ^>=0.2
 
   hs-source-dirs:     src
@@ -72,7 +72,7 @@ executable for-browser
   -- other-extensions:
   build-depends:      base ^>=4.22
 
-  -- , aeson       ^>=2.2.3
+  -- , aeson       ^>=2.3.0
   -- , wasm-backend  ^>=0.2
 
   hs-source-dirs:     src

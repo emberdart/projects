@@ -8,7 +8,7 @@
     "start": "node js/index.js",
     "test": "eslint *.js"
   },
-  "author": "Dan Dart <npm@dandart.co.uk>",
+  "author": "Ember Dart <npm@emberdart.co.uk>",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^8.0.0-alpha.5",

@@ -6,8 +6,8 @@ version:         0.2.0.0
 -- description:
 license:         AGPL-3.0-only
 license-file:    LICENSE
-author:          Dan Dart
-maintainer:      cabal@dandart.co.uk
+author:          Ember Dart
+maintainer:      cabal@emberdart.co.uk
 
 -- copyright:
 build-type:      Simple
@@ -41,7 +41,7 @@ library
   -- other-extensions:
   build-depends:
     , base              ^>=4.22
-    , template-haskell  >=2.23 && <2.25
+    -- , template-haskell  >=2.23 && <2.25
 
   -- for ghc 9.10.1
   hs-source-dirs:     lib
@@ -60,7 +60,7 @@ executable for-node
     , base        ^>=4.22
     , js-backend  ^>=0.2
 
-  -- , aeson       ^>=2.2.3
+  -- , aeson       ^>=2.3.0
   hs-source-dirs:     src
   default-language:   GHC2024
   default-extensions: UnicodeSyntax
@@ -75,7 +75,7 @@ executable for-browser
     , base        ^>=4.22
     , js-backend  ^>=0.2
 
-  -- , aeson       ^>=2.2.3
+  -- , aeson       ^>=2.3.0
   hs-source-dirs:     src
   default-language:   GHC2024
   default-extensions: UnicodeSyntax

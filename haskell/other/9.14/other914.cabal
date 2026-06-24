@@ -6,13 +6,13 @@ version:            0.2.0.0
 
 -- synopsis:
 -- description:
-homepage:           https://github.com/danwdart/projects#readme
+homepage:           https://github.com/emberdart/projects#readme
 license:            AGPL-3.0-only
 
 -- license-file:        LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2019 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2019 Ember Dart
 category:           Web
 build-type:         Simple
 extra-source-files: README.md
@@ -99,6 +99,8 @@ library
       , base              ^>=4.22
       , either            ^>=5.0.2
       , lattices          ^>=2.2.1
+      , template-haskell-lift ^>=0.1
+      , template-haskell-quasiquoter ^>=0.1
       , template-haskell  >=2.23 && <2.25
       , text              ^>=2.1.2
       , yaml              ^>=0.11.11.2

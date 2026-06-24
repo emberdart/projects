@@ -3,9 +3,9 @@
 module PersonParser where
 
 import Data.Char
-import GHC.Read
+import Text.Read
 import Text.ParserCombinators.ReadP
-import Text.ParserCombinators.ReadPrec (lift)
+-- import Text.ParserCombinators.ReadPrec (lift)
 
 data Person = Person {
     name :: String,
@@ -25,7 +25,7 @@ instance Read Person2 where
 
 personParser ∷ (String → Int → a) → ReadP a
 personParser c = do
-    name' <- manyTill get (char ',')
+    name' <- manyTill Text.ParserCombinators.ReadP.get (char ',')
     skipSpaces
     age' <- read <$> munch1 isDigit
     pure $ c name' age'

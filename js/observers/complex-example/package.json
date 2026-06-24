@@ -9,7 +9,7 @@
   "scripts": {
     "test": "snyk test && eslint *.js lib/*.js"
   },
-  "author": "Dan Dart <npm@dandart.co.uk>",
+  "author": "Ember Dart <npm@emberdart.co.uk>",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^9.15.0"

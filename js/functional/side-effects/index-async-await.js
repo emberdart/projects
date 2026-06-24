@@ -33,7 +33,7 @@ const writeFile = promisify(fs.writeFile),
     // hmmmmm network
     try {
         const response = await new Promise((res, rej) =>
-            https.get('https://dandart.co.uk', response => 200 === response.statusCode ?
+            https.get('https://emberdart.co.uk', response => 200 === response.statusCode ?
                 res(response) :
                 rej(new Error('Not 200'))
             )

@@ -2,8 +2,8 @@ cabal-version:      3.14
 name:               consolefrp
 version:            0.2.0.0
 license:            AGPL-3.0-only
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md
 
@@ -14,7 +14,7 @@ executable consolefrp
   build-depends:
     , base        ^>=4.22
     , reflex-vty  ^>=0.6.1
-    , vty         ^>=6.5
+    , vty         ^>=6.6
 
   hs-source-dirs:     src
 

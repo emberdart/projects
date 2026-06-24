@@ -6,13 +6,13 @@ version:            0.2.1
 
 -- synopsis:
 -- description:
-homepage:           https://github.com/danwdart/projects#readme
+homepage:           https://github.com/emberdart/projects#readme
 license:            AGPL-3.0-only
 
 -- license-file:        LICENSE
-author:             Dan Dart
-maintainer:         cabal@dandart.co.uk
-copyright:          2019 Dan Dart
+author:             Ember Dart
+maintainer:         cabal@emberdart.co.uk
+copyright:          2019 Ember Dart
 category:           Web
 build-type:         Simple
 extra-source-files: README.md
@@ -77,7 +77,7 @@ library
       Data.List.Repeat
       Data.List.Safer
       Factor
-      Frobenius
+      Numeric.Frobenius
       Numeric.DiffFactor
       Numeric.Napier
       Numeric.Tree
@@ -108,7 +108,7 @@ library
       Data.List.Repeat
       Data.List.Safer
       Factor
-      Frobenius
+      Numeric.Frobenius
       Numeric.DiffFactor
       Numeric.Napier
       Numeric.Tree
@@ -340,6 +340,7 @@ executable cells-aa
 
 -- gloss
 
+-- Does not exist
 -- executable chaos
 --   import:        shared-properties
 --   main-is:       chaos.hs
@@ -380,7 +381,7 @@ executable compression
   import:  shared-properties
   main-is: compression.hs
 
--- eh? it's gone?
+-- Does not exist
 -- executable cyclic
 --   import:  shared-properties
 --   main-is: cyclic.hs
@@ -395,7 +396,7 @@ executable datepoly
     , Chart  ^>=1.9.5
     , Chart-cairo  ^>=1.9.4.1
     , jolharg-polynomial ^>=0.0.1
-    , time   ^>=1.15
+    , time   ^>=1.16
 
 executable diffnums
   import:  shared-properties
@@ -431,11 +432,12 @@ executable faro
   import:  shared-properties
   main-is: faro.hs
 
+-- Does not exist
 -- executable finitepiece
 --   import:  shared-properties
 --   main-is: finitepiece.hs
--- 
--- ???
+
+-- Does not exist
 -- executable fixies
 --   import:        shared-properties
 --   main-is:       fixies.hs
@@ -457,12 +459,12 @@ executable frobenius
     , extra   ^>=1.8
     , maths   ^>=0.2.1
 
--- executable funsum
---   import:        shared-properties
---   main-is:       funsum.hs
---   build-depends:
---     , base      ^>=4.22
---     , graphite  ^>=0.10.0.1
+executable funsum
+  import:        shared-properties
+  main-is:       funsum.hs
+  build-depends:
+    , base      ^>=4.22
+    , graphite  ^>=0.10.0.1
 
 executable gamma
   import:        shared-properties
@@ -484,13 +486,13 @@ executable graphs
   import:  shared-properties
   main-is: graphs.hs
 
--- executable gtsp
---   import:  shared-properties
---   main-is: gtsp.hs
+executable gtsp
+  import:  shared-properties
+  main-is: gtsp.hs
 
--- executable guessbivstri
---   import:  shared-properties
---   main-is: guessbivstri.hs
+executable guessbivstri
+  import:  shared-properties
+  main-is: guessbivstri.hs
 
 executable happy
   import:        shared-properties
@@ -500,14 +502,14 @@ executable happy
     , digits  ^>=0.3.1
     , maths   ^>=0.2.1
 
--- , graphviz  ^>=2999.20.2
--- executable happygraph
---   import:        shared-properties
---   main-is:       happygraph.hs
---   build-depends:
---     , base      ^>=4.22
---     , digits    ^>=0.3.1
---     , graphite  ^>=0.10.0.1
+executable happygraph
+  import:        shared-properties
+  main-is:       happygraph.hs
+  build-depends:
+    , base      ^>=4.22
+    , digits    ^>=0.3.1
+    , graphite  ^>=0.10.0.1
+    -- , graphviz  ^>=2999.20.2
 
 executable harmonic-limit
   import:        shared-properties
@@ -516,12 +518,12 @@ executable harmonic-limit
     , base   ^>=4.22
     , extra  ^>=1.8
 
--- executable harshad
---   import:        shared-properties
---   main-is:       harshad.hs
---   build-depends:
---     , base   ^>=4.22
---     , digits  ^>=0.3.1
+executable harshad
+  import:        shared-properties
+  main-is:       harshad.hs
+  build-depends:
+    , base   ^>=4.22
+    , digits  ^>=0.3.1
 
 executable highlycompositebase
   import:        shared-properties
@@ -531,7 +533,7 @@ executable highlycompositebase
     , digits  ^>=0.3.1
     , maths   ^>=0.2.1
 
--- ???
+-- Does not exist
 -- executable inbase
 --   import:        shared-properties
 --   main-is:       inbase.hs
@@ -548,6 +550,7 @@ executable ints
     , base        ^>=4.22
     , containers  ^>=0.8
 
+-- Unfinished
 -- executable jig
 --   import: shared-properties
 --   main-is:             jig.hs
@@ -565,11 +568,16 @@ executable keyboardlength
     , bytestring  ^>=0.12.2
     , text        ^>=2.1.2
 
--- Disabled because of https://github.com/alx741/graphite/issues/7
--- executable localgraph
---   import: shared-properties
---   main-is:             localgraph.hs
---   build-depends:       base ^>=4.22, async, fgl, graphite, graphviz, hashable, text        ^>=2.1.2
+executable localgraph
+  import: shared-properties
+  main-is:             localgraph.hs
+  build-depends:
+      base ^>=4.22
+    , fgl
+    , graphite
+    , graphviz
+    , hashable
+    , text        ^>=2.1.2
 
 executable lucas
   import:  shared-properties
@@ -618,7 +626,7 @@ executable oeis
 
   main-is:       oeis.hs
   build-depends:
-    , aeson          ^>=2.2.3
+    , aeson          ^>=2.3.0
     , base           ^>=4.22
     , GenericPretty  ^>=1.2.2
     , req            ^>=3.13.4
@@ -673,6 +681,7 @@ executable polynomials
   import:  shared-properties
   main-is: polynomials.hs
 
+-- Does not exist
 -- executable powmodidempotent
 --   import:  shared-properties
 --   main-is: powmodidempotent.hs
@@ -685,14 +694,14 @@ executable pyth
   import:  shared-properties
   main-is: pyth.hs
 
+-- Does not exist
 -- executable rootmod
 --   import:        shared-properties
 --   main-is:       rootmod.hs
 --   build-depends:
 --     , base      ^>=4.22
 --     , graphviz  ^>=2999.20.2
-
--- , numbers ^>=3000.2.0.2
+--     , numbers   ^>=3000.2.0.2
 
 executable rootrationalapprox
   import:  shared-properties
@@ -743,17 +752,15 @@ executable ulam
 executable decomp
   import:  shared-properties
   main-is: primefun/decomp.hs
-
 -- fcv, primes ^>=0.2.1
 
--- executable eulerheegner
---   import:  shared-properties
---   main-is: primefun/eulerheegner.hs
---   build-depends:
---     , base   ^>=4.22
---     , numbers  ^>=3000.2.0.2
---     , primes  ^>=0.2.1
-
+executable eulerheegner
+  import:  shared-properties
+  main-is: primefun/eulerheegner.hs
+  build-depends:
+    , base   ^>=4.22
+    -- , numbers  ^>=3000.2.0.2
+    , primes  ^>=0.2.1
 
 executable harmonic-prime-denoms
   import:        shared-properties
@@ -789,28 +796,27 @@ executable semiprime
     , maths    ^>=0.2.1
     , tabular  ^>=0.2.2.8
 
--- , primes   ^>=0.2.1
 executable upperlower
   import:        shared-properties
-
   if ((arch(javascript) || arch(wasm32)) || flag(musl))
     buildable: False
-
   main-is:       primefun/upperlower.hs
   build-depends:
     , base   ^>=4.22
     , maths  ^>=0.2.1
 
+-- Does not exist
 -- executable squareplusone
 --   import:        shared-properties
 --   main-is:       primefun/squareplusone.hs
 --   build-depends:
+--     , base   ^>=4.22
+--     , primes   ^>=0.2.1
+
 test-suite maths-test
   import:             shared-properties
-
   if (arch(javascript) || arch(wasm32))
     buildable: False
-
   hs-source-dirs:     test
   type:               exitcode-stdio-1.0
   main-is:            Spec.hs

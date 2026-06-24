@@ -5,9 +5,9 @@
 module RuntimeTypes where
 
 import Data.Proxy
-import Language.Haskell.TH
+import Language.Haskell.TH.QuasiQuoter
 
-gen ∷ Proxy a → Proxy b → DecsQ
+gen ∷ Proxy a → Proxy b → Q [Dec]
 gen _ _ = [d|
     data MyType = AString String | AnInt Int
     data MyType2 a b = ATuple a | AThingy b

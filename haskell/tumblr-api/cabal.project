@@ -1,6 +1,6 @@
 source-repository-package
   type: git
-  location: https://github.com/danwdart/humblr.git
+  location: https://github.com/emberdart/humblr.git
   tag: a0e466b8bb51407ec1131d172e4f6eab994970ef
 
 packages: *
