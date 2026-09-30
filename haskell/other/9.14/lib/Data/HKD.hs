@@ -1,10 +1,12 @@
 {-# LANGUAGE Safe         #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module Data.HKD (HKD) where
+module Data.HKD (HKD, VoidF) where
 
 -- import Data.Functor.Const
 import Data.Functor.Identity
+
+data VoidF a
 
 type family HKD f a where
   -- this slightly screws with doing mapping as well.. we'll have to see...

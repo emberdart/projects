@@ -85,6 +85,17 @@ envVars = Thriple {
     c = "ENV_BOOL_C"
 }
 
+data VoidF a
+
+deriving instance Show (VoidF a) -- lol
+
+nothingGood :: Thriple VoidF
+nothingGood = Thriple {
+    a = undefined,
+    b = undefined,
+    c = undefined
+}
+
 envParser ∷ Thriple EnvParser
 envParser = Thriple {
     a = EnvParser $ first (L.singleton . T.pack) . eitherToValidation . readEither,

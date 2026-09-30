@@ -2,7 +2,7 @@
 {-# LANGUAGE Safe                 #-}
 {-# LANGUAGE UndecidableInstances #-}
 
-module Data.Thriple (Thriple(..), Triple) where
+module Data.Thriple (Thriple(..), Triple, NothingGood) where
 
 import Data.Functor.Identity
 import Data.HKD
@@ -22,3 +22,5 @@ deriving instance (
     ) ⇒ Show (Thriple f)
 
 type Triple = Thriple Identity
+
+type NothingGood = Thriple VoidF

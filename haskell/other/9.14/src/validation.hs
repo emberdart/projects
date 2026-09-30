@@ -9,7 +9,7 @@ import Data.Either.Validation
 import Data.Foldable
 import Data.HKD.Generic
 import Data.Thriple
--- import Data.Thriple.Things
+import Data.Thriple.Things
 
 ke, je, me ∷ Either String String
 ke = Left "Why?: "

@@ -41,6 +41,11 @@ data Vec n a where
     Nil :: Vec 0 a
     (:>) :: a -> Vec n a -> Vec (n + 1) a
 
+-- ???
+data VecA n a
+    = forall k. NilA (a -> k)
+    | forall k. (::>) a (VecA n a) (VecA (n + 1) a -> k)
+
 type StringL a = Vec a Char
 
 type MaxL m a = forall n. (n <= m) ⇒ Vec n a
