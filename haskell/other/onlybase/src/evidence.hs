@@ -91,6 +91,8 @@ data SomeUser where
 
 deriving instance Show SomeUser
 
+newtype SomeUserA = SomeUserA (forall a b. UserWithType a -> b)
+
 -- type SUser = forall a. UserWithType a
 
 -- >>> userToUserWithType normalUser

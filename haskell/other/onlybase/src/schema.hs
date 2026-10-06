@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wno-unused-top-binds #-}
 
-module Main (main) where
+module Main where
 
 data Yaml
   = String String
@@ -14,9 +14,16 @@ data Schema a where
   SField :: String -> Schema a -> Schema a
   SUnit :: Schema ()  -- Empty schema
 
+data SchemaA a
+    = SAString (forall k. String -> k)
+    | SAPair (Schema a) (forall b. Schema b) (forall b k. (a, b) -> k)
+    | SAField String (Schema a) (forall k. Schema a -> k)
+    | SAUnit ()
+
 -- Reading a schema: the type index of the schema is part of the output
 -- of parsing. It is not known at compile-time, so wrap it in an existential type.
 
+-- this is in a library... but we're onlybase so I've stolen it
 data Some f where
   Some :: f a -> Some f
 

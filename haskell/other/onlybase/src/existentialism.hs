@@ -9,7 +9,7 @@ import Control.Exception
 
 -- Inaccessible container for reifying a class?
 
-data Showable = forall a . Show a => Showable a
+data Showable = forall a. Show a => Showable a
 
 showable ∷ Showable → String
 showable x = case x of Showable val -> show val
